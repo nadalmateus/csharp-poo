@@ -6,7 +6,16 @@ namespace csharp_poo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Console.WriteLine("Hello World");
         }
     }
+
+    class Customer
+    {
+        public string Name { get; set; }
+        public Guid Id { get; set; }
+
+    }
+
 }
