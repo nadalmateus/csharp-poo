@@ -6,25 +6,41 @@ namespace csharp_poo
     {
         static void Main(string[] args)
         {
+            var pagamentoBoleto = new PagamentoBoleto();
+            pagamentoBoleto.Pagar();
+            pagamentoBoleto.Vencimento = DateTime.Now;
+            pagamentoBoleto.NumeroBoleto = "123";
             Console.WriteLine("Hello World");
+
+
+
+            var pagamento = new Pagamentos();
+            pagamento.Pagar();
+
+            var pagamentoCartaoCredito = new PagamentoCartaoCredito();
+            pagamentoCartaoCredito.NumeroCartao = "1234";
         }
     }
 
     class Pagamentos
     {
-        DateTime Vencimento;
+        public DateTime Vencimento;
 
 
-        void Pagar()
-        {
-            ConsultarSaldoDoCartao("123123123");
-
-        }
-
-        private void ConsultarSaldoDoCartao(string numerocartao)
+        public void Pagar()
         {
 
         }
+
+    }
+    class PagamentoBoleto : Pagamentos
+    {
+        public string NumeroBoleto { get; set; }
+    }
+
+    class PagamentoCartaoCredito : Pagamentos
+    {
+        public string NumeroCartao { get; set; }
     }
 
 }
