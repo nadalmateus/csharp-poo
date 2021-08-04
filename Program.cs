@@ -6,16 +6,16 @@ namespace csharp_poo
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Hello World");
         }
     }
 
-    class Customer
+    class Pagamentos
     {
-        public string Name { get; set; }
-        public Guid Id { get; set; }
-
+        public DateTime Vencimento { get; set; }
+        void Pagar()
+        {
+        }
     }
 
 }
