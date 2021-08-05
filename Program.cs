@@ -27,7 +27,7 @@ namespace csharp_poo
         public DateTime Vencimento;
 
 
-        public void Pagar()
+        public virtual void Pagar()
         {
 
         }
@@ -35,12 +35,20 @@ namespace csharp_poo
     }
     class PagamentoBoleto : Pagamentos
     {
-        public string NumeroBoleto { get; set; }
+        public string NumeroBoleto;
+
+        public override void Pagar()
+        {
+            base.Pagar();
+        }
     }
 
     class PagamentoCartaoCredito : Pagamentos
     {
         public string NumeroCartao { get; set; }
+
+        public override void Pagar() { }
+
     }
 
 }
