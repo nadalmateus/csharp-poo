@@ -12,9 +12,18 @@ namespace csharp_poo
 
     class Pagamentos
     {
-        public DateTime Vencimento { get; set; }
+        DateTime Vencimento;
+
+
         void Pagar()
         {
+            ConsultarSaldoDoCartao("123123123");
+
+        }
+
+        private void ConsultarSaldoDoCartao(string numerocartao)
+        {
+
         }
     }
 
