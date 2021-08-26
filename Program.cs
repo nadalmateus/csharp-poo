@@ -6,28 +6,32 @@ namespace csharp_poo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World");
+
+
+            using (var pagamento = new Pagamento())
+            {
+                Console.WriteLine("Processando o pagamento");
+            }
+
+
+
         }
     }
 
-    public class Pagamentos
+    public class Pagamento : IDisposable
     {
-        DateTime Vencimento;
-        Adresss BilingAdress;
 
-
-
-        void Pagar()
+        public Pagamento()
         {
+            Console.WriteLine("Iniciando Pagamento");
 
+        }
+
+        public void Dispose()
+        {
+            Console.WriteLine("Finalizando Pagamento");
         }
     }
 
-    public class Adresss
-    {
-        public string ZipCode;
-
-
-    }
 
 }
