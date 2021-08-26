@@ -6,30 +6,28 @@ namespace csharp_poo
     {
         static void Main(string[] args)
         {
-            var pagamentos = new Pagamentos();
             Console.WriteLine("Hello World");
-
         }
     }
 
     public class Pagamentos
     {
-        protected DateTime Vencimento;
+        DateTime Vencimento;
+        Adresss BilingAdress;
+
+
 
         void Pagar()
         {
 
         }
     }
-    public class PagamentosBoleto : Pagamentos
+
+    public class Adresss
     {
+        public string ZipCode;
 
 
-        void Teste()
-        {
-            base.Pagar();
-
-        }
     }
 
 }
